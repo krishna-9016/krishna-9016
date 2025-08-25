@@ -46,7 +46,7 @@ This section includes my GitHub stats and a snake animation of my contribution g
 </p>
 
 <p align="center">
-  <img src="https://github.com/krishna-9016/krishna-9016/raw/output/github-contribution-grid-snake.svg" alt="contribution snake" />
+  <img src="https://github.com/krishna-9016/krishna-9016/blob/output/github-snake.svg" alt="contribution snake" />
 </p>
 
 
