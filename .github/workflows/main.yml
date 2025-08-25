@@ -4,17 +4,16 @@ on:
   schedule:
     # Runs every 12 hours
     - cron: "0 */12 * * *"
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # This step checks out your repository code
+      # This step gets your code
       - uses: actions/checkout@v3
 
-      # This step generates the snake animation SVG file
+      # This step generates the animation file using the new method
       - uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
@@ -22,7 +21,7 @@ jobs:
             dist/github-snake.svg
             dist/github-snake-dark.svg?palette=github-dark
 
-      # This step pushes the generated file back to your repository
+      # This step saves the animation to a branch named "output"
       - name: Push snake animation
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
